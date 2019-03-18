@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns=http://www.w3.org/1999/xhtml xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>TP4: Events</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+<h2>Add Event</h2>
+
+<form action="#" th:action="@{/saveEvenement}" th:object="${evenement}" method="post">
+
+    <label for="name">Intitule</label>
+    <input type="text" th:field="*{intitule}" id="intitule" placeholder="Intitule">
+    <span th:if="${#fields.hasErrors('intitule')}" th:errors="*{intitule}"></span>
+    <br>
+    <label for="name">Date_debut</label>
+    <input type="text" th:field="*{date_debut}" id="date_debut" placeholder="Date_debut">
+    <span th:if="${#fields.hasErrors('date_debut')}" th:errors="*{date_debut}"></span>
+    <br>
+    <label for="name">Description</label>
+    <input type="text" th:field="*{description}" id="description" placeholder="Description">
+    <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></span>
+    <br>
+    <label for="name">Duree</label>
+    <input type="text" th:field="*{duree}" id="duree" placeholder="Duree">
+    <span th:if="${#fields.hasErrors('duree')}" th:errors="*{duree}"></span>
+    <br>
+    <label for="name">Nbr participants max</label>
+    <input type="text" th:field="*{nbr_part_max}" id="nbr_part_max" placeholder="nbr_part_max">
+    <span th:if="${#fields.hasErrors('nbr_part_max')}" th:errors="*{nbr_part_max}"></span>
+    <br>
+    <label for="name">Organisateur</label>
+    <input type="text" th:field="*{organisateur}" id="organisateur" placeholder="organisateur">
+    <span th:if="${#fields.hasErrors('organisateur')}" th:errors="*{organisateur}"></span>
+    <br>
+    <label for="name">Theme</label>
+    <input type="text" th:field="*{theme}" id="theme" placeholder="theme">
+    <span th:if="${#fields.hasErrors('theme')}" th:errors="*{theme}"></span>
+    <br>
+    <label for="name">Type event</label>
+    <input type="text" th:field="*{type_even}" id="type_even" placeholder="type_even">
+    <span th:if="${#fields.hasErrors('type_even')}" th:errors="*{type_even}"></span>
+    <br>
+    <input type="submit" value="Add Event">
+
+</form>
+
+</body>
+</html>

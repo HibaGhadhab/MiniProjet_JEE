@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns=http://www.w3.org/1999/xhtml xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>TP4: Participants</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+<h2>List of participants</h2>
+
+<table>
+    <tr>
+        <th>Num_pers</th>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Date_naiss</th>
+        <th>Email</th>
+        <th>Organisation</th>
+        <th>Event</th>
+    </tr>
+
+    <tr th:each="participant : ${participants}">
+        <td th:text="${participant.num_pers}">Num_pers</td>
+        <td th:text="${participant.nom}">Nom</td>
+        <td th:text="${participant.prenom}">Prenom</td>
+        <td th:text="${participant.date_naiss}">Date_naiss</td>
+        <td th:text="${participant.email}">Email</td>
+        <td th:text="${participant.organisation}">Organisation</td>
+        <td th:text="${participant.event.num_even}">Event</td>
+    </tr>
+</table>
+
+</body>
+</html>
