@@ -26,8 +26,8 @@ public class Evenement {
     @Id
     @GeneratedValue(generator = "increment")
     @GenericGenerator(name = "increment", strategy = "increment")
-    @Column(name = "num_even", nullable = false)
-    private Long num_even;
+    @Column(name = "numEven", nullable = false)
+    private Long numEven;
 
     @Column(name = "intitule", nullable = false)
     private String intitule;
@@ -35,14 +35,14 @@ public class Evenement {
     @Column(name = "theme")
     private String theme;
 
-    @Column(name = "date_debut")
-    private String date_debut;
+    @Column(name = "dateDebut")
+    private String dateDebut;
 
     @Column(name = "duree")
     private String duree;
 
-    @Column(name = "nbr_part_max")
-    private int nbr_part_max;
+    @Column(name = "nbrPartMax")
+    private int nbrPartMax;
 
     @Column(name = "description")
     private String description;
@@ -50,8 +50,8 @@ public class Evenement {
     @Column(name = "organisateur")
     private String organisateur;
 
-    @Column(name = "type_even")
-    private String type_even;
+    @Column(name = "typeEvent")
+    private String typeEvent;
 
     @OneToMany(mappedBy = "event")
     private List<Participant> participants = new ArrayList<Participant>();
@@ -61,27 +61,27 @@ public class Evenement {
     public Evenement() {
     }
 
-    public Evenement(String intitule, String theme, String date_debut, String duree, int nbr_part_max, String description, String organisateur, String type_even) {
+    public Evenement(String intitule, String theme, String dateDebut, String duree, int nbrPartMax, String description, String organisateur, String typeEvent) {
         this.intitule = intitule;
         this.theme = theme;
-        this.date_debut = date_debut;
+        this.dateDebut = dateDebut;
         this.duree = duree;
-        this.nbr_part_max = nbr_part_max;
+        this.nbrPartMax = nbrPartMax;
         this.description = description;
         this.organisateur = organisateur;
-        this.type_even = type_even;
+        this.typeEvent = typeEvent;
     }
 
     // ---- To String -------------- //
     @Override
     public String toString() {
-        return "Evenement{" + "num_even=" + num_even + ", intitule=" + intitule + ", theme=" + theme + ", date_debut=" + date_debut + ", duree=" + duree + ", nbr_part_max=" + nbr_part_max + ", description=" + description + ", organisateur=" + organisateur + ", type_even=" + type_even + '}';
+        return "Evenement{" + "numEven=" + numEven + ", intitule=" + intitule + ", theme=" + theme + ", dateDebut=" + dateDebut + ", duree=" + duree + ", nbrPartMax=" + nbrPartMax + ", description=" + description + ", organisateur=" + organisateur + ", typeEvent=" + typeEvent + '}';
     }
 
     // ------ Getters -------------- //
 
-    public Long getNum_even() {
-        return num_even;
+    public Long getnumEven() {
+        return numEven;
     }
 
     public String getIntitule() {
@@ -92,16 +92,16 @@ public class Evenement {
         return theme;
     }
 
-    public String getDate_debut() {
-        return date_debut;
+    public String getdateDebut() {
+        return dateDebut;
     }
 
     public String getDuree() {
         return duree;
     }
 
-    public int getNbr_part_max() {
-        return nbr_part_max;
+    public int getnbrPartMax() {
+        return nbrPartMax;
     }
 
     public String getDescription() {
@@ -112,8 +112,8 @@ public class Evenement {
         return organisateur;
     }
 
-    public String getType_even() {
-        return type_even;
+    public String gettypeEvent() {
+        return typeEvent;
     }
 
     public List<Participant> getParticipants() {
@@ -130,16 +130,16 @@ public class Evenement {
         this.theme = theme;
     }
 
-    public void setDate_debut(String date_debut) {
-        this.date_debut = date_debut;
+    public void setdateDebut(String dateDebut) {
+        this.dateDebut = dateDebut;
     }
 
     public void setDuree(String duree) {
         this.duree = duree;
     }
 
-    public void setNbr_part_max(int nbr_part_max) {
-        this.nbr_part_max = nbr_part_max;
+    public void setnbrPartMax(int nbrPartMax) {
+        this.nbrPartMax = nbrPartMax;
     }
 
     public void setDescription(String description) {
@@ -150,8 +150,8 @@ public class Evenement {
         this.organisateur = organisateur;
     }
 
-    public void setType_even(String type_even) {
-        this.type_even = type_even;
+    public void settypeEvent(String typeEvent) {
+        this.typeEvent = typeEvent;
     }
 
     public void setParticipants(List<Participant> participants) {

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>TP4: Participants</title>
+</head>
+
+<body>
+<h2>Ajout d'un participant: </h2>
+<form action="#" th:action="@{/saveParticipant}" th:object="${participant}" method="post">
+
+    <label for="name">Nom</label>
+    <input type="text" th:field="*{nom}" id="nom" placeholder="Nom">
+    <span th:if="${#fields.hasErrors('nom')}" th:errors="*{nom}"></span>
+    <br>
+
+    <label for="name">Prénom</label>
+    <input type="text" th:field="*{prenom}" id="prenom" placeholder="Prénom">
+    <span th:if="${#fields.hasErrors('prenom')}" th:errors="*{prenom}"></span>
+    <br>
+
+    <label for="name">Email</label>
+    <input type="text" th:field="*{email}" id="email" placeholder="Email">
+    <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+    <br>
+
+    <label for="name">Date de naissance</label>
+    <input type="text" th:field="*{dateNaiss}" id="dateNaiss" placeholder="Date de naissance">
+    <span th:if="${#fields.hasErrors('dateNaiss')}" th:errors="*{dateNaiss}"></span>
+    <br>
+
+    <label for="name">Organisation</label>
+    <input type="text" th:field="*{organisation}" id="organisation" placeholder="Organisation">
+    <span th:if="${#fields.hasErrors('organisation')}" th:errors="*{organisation}"></span>
+    <br>
+
+    <label for="name">Observations</label>
+    <input type="text" th:field="*{observations}" id="observations" placeholder="Observations">
+    <span th:if="${#fields.hasErrors('observations')}" th:errors="*{observations}"></span>
+    <br>
+
+    <label for = "name">Event</label>
+    <select th:field="*{event}">
+        <option value=""> -- </option>
+        <option th:each="event : ${evenements}"
+                th:value="${event.getnumEven()}"
+                th:utext="${event.intitule}"/>
+    </select>
+
+
+    <br>
+    <input type="submit" value="ajouter">
+
+</form>
+</body>
+
+</html>

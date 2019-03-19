@@ -28,4 +28,9 @@ public class ParticipantService {
 
         return participants;
     }
+
+    public void save(Participant participant) {
+
+        repository.save(participant);
+    }
 }

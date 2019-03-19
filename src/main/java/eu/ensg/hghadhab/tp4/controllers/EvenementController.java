@@ -9,6 +9,7 @@ import eu.ensg.hghadhab.tp4.models.Evenement;
 import eu.ensg.hghadhab.tp4.services.EvenementService;
 
 import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,4 +50,5 @@ public class EvenementController {
         evenementService.save(evenement);
         return getAllEvents(model);
     }
+
 }

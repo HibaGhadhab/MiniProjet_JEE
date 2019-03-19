@@ -23,29 +23,29 @@ public class Participant {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "num_pers", nullable = false)
-    private Long num_pers;
+    @Column(name = "numPers", nullable = false)
+    private Long numPers;
 
-    @Column(name = "nom", nullable = false)
+    @Column(name = "nom", nullable = true)
     private String nom;
 
-    @Column(name = "prenom", nullable = false)
+    @Column(name = "prenom", nullable = true)
     private String prenom;
 
-    @Column(name = "email", nullable = false)
+    @Column(name = "email", nullable = true)
     private String email;
 
-    @Column(name = "date_naiss", nullable = false)
-    private String date_naiss;
+    @Column(name = "dateNaiss", nullable = true)
+    private String dateNaiss;
 
-    @Column(name = "organisation", nullable = false)
+    @Column(name = "organisation", nullable = true)
     private String organisation;
 
-    @Column(name = "observations", nullable = false)
+    @Column(name = "observations", nullable = true)
     private String observations;
 
     @ManyToOne
-    @JoinColumn(name = "num_even", nullable = false)
+    @JoinColumn(name = "numEven", nullable = true)
     private Evenement event;
 
     // ------ Constructeurs -------------- //
@@ -54,11 +54,11 @@ public class Participant {
     }
 
     public Participant(String nom, String prenom,
-                       String email, String date_naiss, String organisation, String observations, Evenement event) {
+                       String email, String dateNaiss, String organisation, String observations, Evenement event) {
         this.nom = nom;
         this.prenom = prenom;
         this.email = email;
-        this.date_naiss = date_naiss;
+        this.dateNaiss = dateNaiss;
         this.organisation = organisation;
         this.observations = observations;
         this.event = event;
@@ -68,14 +68,14 @@ public class Participant {
 
     @Override
     public String toString() {
-        return "Participant{" + "num_pers=" + num_pers + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + ", date_naiss=" + date_naiss + ", organisation=" + organisation + ", observations=" + observations + '}';
+        return "Participant{" + "numPers=" + numPers + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + ", dateNaiss=" + dateNaiss + ", organisation=" + organisation + ", observations=" + observations + '}';
     }
 
 
     // ------ Getters -------------- //
 
-    public Long getNum_pers() {
-        return num_pers;
+    public Long getNumPers() {
+        return numPers;
     }
 
     public String getNom() {
@@ -90,8 +90,8 @@ public class Participant {
         return email;
     }
 
-    public String getDate_naiss() {
-        return date_naiss;
+    public String getDateNaiss() {
+        return dateNaiss;
     }
 
     public String getOrganisation() {
@@ -120,8 +120,8 @@ public class Participant {
         this.email = email;
     }
 
-    public void setDate_naiss(String date_naiss) {
-        this.date_naiss = date_naiss;
+    public void setDateNaiss(String dateNaiss) {
+        this.dateNaiss = dateNaiss;
     }
 
     public void setOrganisation(String organisation) {

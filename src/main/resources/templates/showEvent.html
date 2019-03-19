@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html xmlns=http://www.w3.org/1999/xhtml xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>TP4: Events</title>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>TP4: Evènements</title>
 </head>
 
 <body>
-<h2>List of Events</h2>
+<h2>List des évènements: </h2>
 
 <table>
     <tr>
-        <th>Num_even</th>
+        <th>numEven</th>
         <th>Intitule</th>
         <th>Date_debut</th>
         <th>Duree</th>
         <th>Theme</th>
         <th>Organisateur</th>
-        <th>Type_even</th>
+        <th>typeEvent</th>
     </tr>
 
     <tr th:each="event : ${evenements}">
-        <td th:text="${event.num_even}">Num_even</td>
+        <td th:text="${event.getnumEven()}">numEven</td>
         <td th:text="${event.intitule}">Intitule</td>
-        <td th:text="${event.date_debut}">Date_debut</td>
+        <td th:text="${event.getdateDebut()}">DateDebut</td>
         <td th:text="${event.duree}">Duree</td>
         <td th:text="${event.theme}">Theme</td>
         <td th:text="${event.organisateur}">Organisateur</td>
-        <td th:text="${event.type_even}">Type_even</td>
+        <td th:text="${event.gettypeEvent()}">typeEvent</td>
     </tr>
 </table>
 
-<p>Add event <a href="/addEvenement">here</a></p>
+<p>Ajouter un évènement <a href="/addEvenement">ici</a></p>
 
 </body>
 </html>
