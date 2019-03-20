@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TP4: login</title>
+</head>
+<body>
+
+<h1>Login page</h1>
+
+<form action="#" th:action="@{/login}" th:object="${participant}" method="post">
+    <label for="name">Nom</label>
+    <input type="text" placeholder="Nom">
+    <br>
+
+    <label for="name">Prénom</label>
+    <input type="text" placeholder="Prénom">
+    <br>
+    <input type="submit" value="login">
+</form>
+
+</body>
+</html>

@@ -9,12 +9,14 @@ import eu.ensg.hghadhab.tp4.models.Participant;
 import eu.ensg.hghadhab.tp4.repositories.ParticipantRepo;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 /**
- * @author formation
+ * @author Hiba GHADHAB
  */
 @Service
 public class ParticipantService {
@@ -33,4 +35,10 @@ public class ParticipantService {
 
         repository.save(participant);
     }
+
+    public void deleteById(Long id){
+
+        repository.deleteById(id);
+    }
+
 }

@@ -19,17 +19,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * @author formation
+ * @author Hiba GHADHAB
  */
 @Controller
 public class ParticipantController {
 
     @Autowired
     ParticipantService participantService;
-
     @Autowired
     EvenementService evenementService;
 
@@ -53,7 +54,7 @@ public class ParticipantController {
     }
 
     @PostMapping("/saveParticipant")
-    public String saveEvenement(@Valid Participant participant, BindingResult result, Model model) {
+    public String saveParticipant(@Valid Participant participant, BindingResult result, Model model) {
         if (result.hasErrors()) {
             return "addParticipant";
         }
@@ -61,6 +62,19 @@ public class ParticipantController {
         return getAllParticipant(model);
     }
 
+    @GetMapping("/deleteParticipant/{id}")
+    public String deleteParticipant(@PathVariable("id") long id, Model model){
+        participantService.deleteById(id);
+        return getAllParticipant(model);
+    }
+
+    @PostMapping("/login")
+    public String authentification(@Valid Participant participant, BindingResult result, Model model) {
+//        if (result.hasErrors()) {
+//            return "login";
+//        }
+        return "welcomePage";
+    }
 
 
 

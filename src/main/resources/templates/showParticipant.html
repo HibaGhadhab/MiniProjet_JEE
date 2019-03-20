@@ -18,6 +18,8 @@
         <th>Email</th>
         <th>Organisation</th>
         <th>Event</th>
+        <th>Edit</th>
+        <th>Delete</th>
     </tr>
 
     <tr th:each="participant : ${participants}">
@@ -28,6 +30,8 @@
         <td th:text="${participant.email}">Email</td>
         <td th:text="${participant.organisation}">Organisation</td>
         <td th:text="${participant.event.getnumEven()}">Event</td>
+        <td><a th:href="@{/editParticipant/{id}(id=${participant.getNumPers()})}">Edit</a></td>
+        <td><a th:href="@{/deleteParticipant/{id}(id=${participant.getNumPers()})}">Delete</a></td>
     </tr>
 </table>
 

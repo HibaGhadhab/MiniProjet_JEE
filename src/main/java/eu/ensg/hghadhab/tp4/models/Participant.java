@@ -15,7 +15,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
- * @author formation
+ * @author Hiba GHADHAB
  */
 @Entity
 @Table(name = "participant")

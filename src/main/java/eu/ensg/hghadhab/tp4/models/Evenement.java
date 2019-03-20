@@ -17,7 +17,7 @@ import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 
 /**
- * @author formation
+ * @author Hiba GHADHAB
  */
 @Entity
 @Table(name = "evenement")
@@ -80,7 +80,7 @@ public class Evenement {
 
     // ------ Getters -------------- //
 
-    public Long getnumEven() {
+        public Long getnumEven() {
         return numEven;
     }
 

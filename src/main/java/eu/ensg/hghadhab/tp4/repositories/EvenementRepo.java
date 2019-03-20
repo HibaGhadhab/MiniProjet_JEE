@@ -11,7 +11,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 /**
- * @author formation
+ * @author Hiba GHADHAB
  */
 @Repository
 public interface EvenementRepo extends CrudRepository<Evenement, Long> {

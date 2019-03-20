@@ -17,10 +17,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 /**
- * @author formation
+ * @author Hiba GHADHAB
  */
 @Controller
 public class EvenementController {
@@ -48,6 +49,12 @@ public class EvenementController {
             return "addEvent";
         }
         evenementService.save(evenement);
+        return getAllEvents(model);
+    }
+
+    @GetMapping("/deleteEvent/{id}")
+    public String deleteEvent(@PathVariable("id") long id, Model model){
+        evenementService.deleteById(id);
         return getAllEvents(model);
     }
 

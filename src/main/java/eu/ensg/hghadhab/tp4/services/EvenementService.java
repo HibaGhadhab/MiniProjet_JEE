@@ -14,7 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- * @author formation
+ * @author Hiba GHADHAB
  */
 @Service
 public class EvenementService {
@@ -33,5 +33,9 @@ public class EvenementService {
         repository.save(evenement);
     }
 
+    public void deleteById(Long id){
+
+        repository.deleteById(id);
+    }
 
 }

@@ -18,6 +18,8 @@
         <th>Theme</th>
         <th>Organisateur</th>
         <th>typeEvent</th>
+        <th>Edit</th>
+        <th>Delete</th>
     </tr>
 
     <tr th:each="event : ${evenements}">
@@ -28,6 +30,8 @@
         <td th:text="${event.theme}">Theme</td>
         <td th:text="${event.organisateur}">Organisateur</td>
         <td th:text="${event.gettypeEvent()}">typeEvent</td>
+        <td><a th:href="@{/editEvent/{id}(id=${event.getnumEven()})}">Edit</a></td>
+        <td><a th:href="@{/deleteEvent/{id}(id=${event.getnumEven()})}">Delete</a></td>
     </tr>
 </table>
 
