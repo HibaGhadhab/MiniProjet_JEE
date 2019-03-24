@@ -1,0 +1,54 @@
+= Projet JEE: Spring boot & Hibernate
+== Description
+Ce répertoire *MiniProjet_JEE* contient un projet JEE Spring Boot. il s'agit d'une application de gestion des évènements et des participants.
+Ce projet a été élaboré dans le cadre du module Apache Maven, niveau Master 2 TSI 2018/2019 à l'Ecole Nationale des Sciences Géographiques.
+
+Ce projet contient les sous dossiers suivants:
+
+- *models: * contients les entités participant et évènement.
+
+- *repositories: contient les méthodes d'interaction avec la base de données*.
+
+- *services: * contient le côté métier du projet pour alléger le traitement dans les contrôleurs.
+
+- *controllers: * les contrôleurs jouent le rôle d'intermédiaire entre la vue et la base de données en
+acceptant des entrées (des requêtes HTTP) et les convertissants en commandes vers les modèles ou la vue.
+
+== Utilisation
+
+- Page d'accueil:
+
+image::https://raw.githubusercontent.com/HibaGhadhab/
+
+
+- Page d'authentification ( pas de persistance pour les participant, cliquer directement sur "login" )
+
+image::https://raw.githubusercontent.com/HibaGhadhab/
+
+
+- Menu principale (cliquer sur déconnexion pour revenir à la page d'authentification)
+
+image::https://raw.githubusercontent.com/HibaGhadhab/
+
+
+
+== Réalisation
+*1. Affichage de tous les évènements
+
+image::https://raw.githubusercontent.com/HibaGhadhab/
+
+*2. Formulaire d'ajout d'un évènement
+
+*2. Affichage de tous les participants
+
+*2. Formulaire d'ajout d'un participant
+
+
+
+== Auteur
+Hiba GHADHAB.
+
+Mars 2019.
+
+
+

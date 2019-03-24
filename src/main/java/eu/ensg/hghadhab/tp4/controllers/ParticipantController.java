@@ -63,10 +63,20 @@ public class ParticipantController {
     }
 
     @PostMapping("/editParticipant/{id}")
-    public String editParticipant(@PathVariable("id") long id, @Valid Participant participant,
-                             BindingResult result, Model model) {
+    public String editParticipant(@PathVariable("id") long id, Model model) {
+        Participant participant = participantService.findById(id);
+        //participant.setDateNaiss();
+//        participantService.save(participant);
+//        model.addAttribute("participants", participantService.findAll());
+        return getAllParticipant(model);
+    }
+
+    @PostMapping("/saveEditedParticipant")
+    public String saveEditedParticipant(@Valid Participant participant, BindingResult result, Model model){
+        if (result.hasErrors()){
+            return getAllParticipant(model);
+        }
         participantService.save(participant);
-        model.addAttribute("participants", participantService.findAll());
         return getAllParticipant(model);
     }
 

@@ -41,4 +41,7 @@ public class ParticipantService {
         repository.deleteById(id);
     }
 
+    public Participant findById(Long id){
+        return repository.findById(id).get();
+    }
 }
