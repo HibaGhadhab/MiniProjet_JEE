@@ -18,17 +18,17 @@ acceptant des entrées (des requêtes HTTP) et les convertissants en commandes v
 
 - Page d'accueil:
 
-image::https://github.com/HibaGhadhab/MiniProjet_JEE/blob/master/CaptureEcran/Accueil.png
+image::https://raw.githubusercontent.com/HibaGhadhab/MiniProjet_JEE/master/CaptureEcran/Accueil.png
 
 
 - Page d'authentification ( pas de persistance pour les participant, cliquer directement sur "login" )
 
-image::https://github.com/HibaGhadhab/MiniProjet_JEE/blob/master/CaptureEcran/Login.png
+image::https://raw.githubusercontent.com/HibaGhadhab/MiniProjet_JEE/master/CaptureEcran/Login.png
 
 
-- Menu principale (cliquer sur déconnexion pour revenir à la page d'authentification)
+- Menu principale ( cliquer sur déconnexion pour revenir à la page d'authentification )
 
-image::https://github.com/HibaGhadhab/MiniProjet_JEE/blob/master/CaptureEcran/Menu.png
+image::https://raw.githubusercontent.com/HibaGhadhab/MiniProjet_JEE/master/CaptureEcran/Menu.png
 
 
 
@@ -36,19 +36,21 @@ image::https://github.com/HibaGhadhab/MiniProjet_JEE/blob/master/CaptureEcran/Me
 
 *1. Affichage de tous les évènements
 
-image::https://github.com/HibaGhadhab/MiniProjet_JEE/blob/master/CaptureEcran/events.png
+image::https://raw.githubusercontent.com/HibaGhadhab/MiniProjet_JEE/master/CaptureEcran/events.png
 
-*3. Formulaire d'ajout d'un évènement
+*2. Formulaire d'ajout d'un évènement
 
-image::https://github.com/HibaGhadhab/MiniProjet_JEE/blob/master/CaptureEcran/AjoutEvent.png
+image::https://raw.githubusercontent.com/HibaGhadhab/MiniProjet_JEE/master/CaptureEcran/AjoutEvent.png
 
-*4. Affichage de tous les participants
 
-image::https://github.com/HibaGhadhab/MiniProjet_JEE/blob/master/CaptureEcran/participants.png
+*3. Affichage de tous les participants
 
-*5. Formulaire d'ajout d'un participant
+image::https://raw.githubusercontent.com/HibaGhadhab/MiniProjet_JEE/master/CaptureEcran/participants.png
 
-image::https://github.com/HibaGhadhab/MiniProjet_JEE/blob/master/CaptureEcran/AjoutParticipant.png
+*4. Formulaire d'ajout d'un participant
+
+image::https://raw.githubusercontent.com/HibaGhadhab/MiniProjet_JEE/master/CaptureEcran/AjoutParticipant.png
+
 
 
 
