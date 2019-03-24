@@ -4,7 +4,7 @@
 == Description
 
 Ce répertoire *MiniProjet_JEE* contient un projet JEE Spring Boot. il s'agit d'une application de gestion des évènements et des participants.
-Ce projet a été élaboré dans le cadre du module Apache Maven, niveau Master 2 TSI 2018/2019 à l'Ecole Nationale des Sciences Géographiques.
+Ce projet a été élaboré dans le cadre du module programmation JEE, niveau Master 2 TSI 2018/2019 à l'Ecole Nationale des Sciences Géographiques.
 
 
 Ce projet contient les sous dossiers suivants:
