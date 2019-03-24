@@ -26,8 +26,8 @@ public class Evenement {
     @Id
     @GeneratedValue(generator = "increment")
     @GenericGenerator(name = "increment", strategy = "increment")
-    @Column(name = "numEven", nullable = false)
-    private Long numEven;
+    @Column(name = "numEvent", nullable = false)
+    private Long numEvent;
 
     @Column(name = "intitule", nullable = false)
     private String intitule;
@@ -75,13 +75,13 @@ public class Evenement {
     // ---- To String -------------- //
     @Override
     public String toString() {
-        return "Evenement{" + "numEven=" + numEven + ", intitule=" + intitule + ", theme=" + theme + ", dateDebut=" + dateDebut + ", duree=" + duree + ", nbrPartMax=" + nbrPartMax + ", description=" + description + ", organisateur=" + organisateur + ", typeEvent=" + typeEvent + '}';
+        return "Evenement{" + "numEvent=" + typeEvent + ", intitule=" + intitule + ", theme=" + theme + ", dateDebut=" + dateDebut + ", duree=" + duree + ", nbrPartMax=" + nbrPartMax + ", description=" + description + ", organisateur=" + organisateur + ", typeEvent=" + typeEvent + '}';
     }
 
     // ------ Getters -------------- //
 
-        public Long getnumEven() {
-        return numEven;
+        public Long getnumEvent() {
+        return numEvent;
     }
 
     public String getIntitule() {

@@ -9,6 +9,7 @@ import eu.ensg.hghadhab.tp4.models.Evenement;
 import eu.ensg.hghadhab.tp4.repositories.EvenementRepo;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,7 +28,11 @@ public class EvenementService {
         List<Evenement> evenements = (List<Evenement>) repository.findAll();
         return evenements;
     }
+    public Optional<Evenement> findById(Long id){
 
+        Optional<Evenement> evenement = repository.findById(id);
+        return evenement;
+    }
     public void save(Evenement evenement) {
 
         repository.save(evenement);

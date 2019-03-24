@@ -45,7 +45,7 @@ public class Participant {
     private String observations;
 
     @ManyToOne
-    @JoinColumn(name = "numEven", nullable = true)
+    @JoinColumn(name = "numEvent", nullable = true)
     private Evenement event;
 
     // ------ Constructeurs -------------- //

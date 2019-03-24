@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
     <title>TP4: Participants</title>
 </head>
-
 <body>
-<h2>Ajout d'un participant: </h2>
-<form action="#" th:action="@{/saveParticipant}" th:object="${participant}" method="post">
+<h2>Modification d'un participant: </h2>
+<!--th:href="@{/editParticipant/{id}(id=${participant.getNumPers()})}"-->
+<form action="#" th:action="@{/editParticipant/{id}(id=${participant.getNumPers()})}" th:object="${participant}" method="post">
 
     <label for="name">Nom</label>
     <input type="text" th:field="*{nom}" id="nom" placeholder="Nom">
@@ -51,9 +49,8 @@
 
 
     <br>
-    <input type="submit" value="ajouter">
+    <input type="submit" value="modifier">
 
 </form>
 </body>
-
 </html>

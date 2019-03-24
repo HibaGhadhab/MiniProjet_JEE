@@ -11,7 +11,7 @@
 
 <table>
     <tr>
-        <th>numEven</th>
+        <th>numEvent</th>
         <th>Intitule</th>
         <th>Date_debut</th>
         <th>Duree</th>
@@ -23,15 +23,15 @@
     </tr>
 
     <tr th:each="event : ${evenements}">
-        <td th:text="${event.getnumEven()}">numEven</td>
+        <td th:text="${event.getnumEvent()}">numEvent</td>
         <td th:text="${event.intitule}">Intitule</td>
         <td th:text="${event.getdateDebut()}">DateDebut</td>
         <td th:text="${event.duree}">Duree</td>
         <td th:text="${event.theme}">Theme</td>
         <td th:text="${event.organisateur}">Organisateur</td>
         <td th:text="${event.gettypeEvent()}">typeEvent</td>
-        <td><a th:href="@{/editEvent/{id}(id=${event.getnumEven()})}">Edit</a></td>
-        <td><a th:href="@{/deleteEvent/{id}(id=${event.getnumEven()})}">Delete</a></td>
+        <td><a th:href="@{/editEvent/{id}(id=${event.getnumEvent()})}">Edit</a></td>
+        <td><a th:href="@{/deleteEvent/{id}(id=${event.getnumEvent()})}">Delete</a></td>
     </tr>
 </table>
 

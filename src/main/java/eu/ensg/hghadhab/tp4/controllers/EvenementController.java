@@ -52,6 +52,13 @@ public class EvenementController {
         return getAllEvents(model);
     }
 
+    @PostMapping("/editEvent/{id}")
+    public String editParticipant(@PathVariable("id") long id, @Valid Evenement evenement,
+                                  BindingResult result, Model model) {
+        evenementService.save(evenement);
+        model.addAttribute("evenements", evenementService.findAll());
+        return getAllEvents(model);
+    }
     @GetMapping("/deleteEvent/{id}")
     public String deleteEvent(@PathVariable("id") long id, Model model){
         evenementService.deleteById(id);

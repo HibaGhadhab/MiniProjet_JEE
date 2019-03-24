@@ -62,6 +62,14 @@ public class ParticipantController {
         return getAllParticipant(model);
     }
 
+    @PostMapping("/editParticipant/{id}")
+    public String editParticipant(@PathVariable("id") long id, @Valid Participant participant,
+                             BindingResult result, Model model) {
+        participantService.save(participant);
+        model.addAttribute("participants", participantService.findAll());
+        return getAllParticipant(model);
+    }
+
     @GetMapping("/deleteParticipant/{id}")
     public String deleteParticipant(@PathVariable("id") long id, Model model){
         participantService.deleteById(id);
@@ -75,7 +83,5 @@ public class ParticipantController {
 //        }
         return "welcomePage";
     }
-
-
 
 }
